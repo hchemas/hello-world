@@ -3,6 +3,9 @@ import os
 os.system("cls")
 favorite_stocks = []
 num_stocks = int(input("How many stocks do you want to enter? "))
+if num_stocks <= 0:
+    print("You must enter at least one stock.")
+    exit()
 for i in range(num_stocks):
     stock = input("Enter stock symbol #" + str(i+1) + ": ")
     favorite_stocks.append(stock)
